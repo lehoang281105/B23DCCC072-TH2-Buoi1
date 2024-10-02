@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import ToDoList from "./components/ToDoList";
 import ImageSearch from "./components/ImgSearch";
