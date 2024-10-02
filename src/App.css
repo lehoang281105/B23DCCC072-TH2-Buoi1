@@ -1,38 +1,201 @@
-.App {
+/* App.css */
+
+/* Định dạng tổng quan */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
   text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Todo List */
+.todo-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 30%;
+  min-width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container input[type="text"] {
+  width: 60%;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.todo-container button {
+  padding: 8px 12px;
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-container button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li span {
+  flex: 1;
+  padding-left: 10px;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Image Search */
+.image-search-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 30%;
+  min-width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.image-search-container input {
+  width: 60%;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.image-search-container button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-search-container button:hover {
+  background-color: #45a049;
+}
+
+.image-search-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Random Color */
+.random-color {
+  text-align: center;
+  padding: 20px;
+}
+
+.random-color h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.random-color button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.random-color button:hover {
+  background-color: #45a049;
+}
+
+.random-color button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.random-color .color-display {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.random-color .color-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.random-color .current-color,
+.random-color .color-history {
+  width: 45%;
+}
+
+.random-color .current-color .color-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.random-color .color-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.random-color .color-history li {
+  margin: 5px 0;
 }
